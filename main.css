@@ -1,8 +1,11 @@
-
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     padding: 0;
+    background-color: aqua;
 }
 
 .calculator-grid {
@@ -13,6 +16,7 @@ body {
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat (5, 100px);
     color: yellowgreen;
+    border: 3rem solid white;
 }
 
 .calculator-grid > button {
@@ -31,5 +35,11 @@ background-color: turquoise;
 
 .output{
     grid-column: span 3;
+    
+}
 
+.one {
+    grid-column: 1/4;
+    grid-column: 1;
+    grid-row: 1;
 }
