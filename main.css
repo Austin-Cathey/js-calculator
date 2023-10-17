@@ -1,6 +1,6 @@
 
 body {
-    margin: 19%;
+    margin: 0;
     padding: 0;
    
     background-color: aqua;
@@ -18,14 +18,9 @@ body {
     background-color: yellowgreen;
     border: 3rem solid white;
 
-   /*  display: flex;
-    flex-wrap: wrap;
-    min-height: 100vh ;
-    justify-content: center;
-    justify-content: center; */
 }
 
-.calculator-grid > button {
+.button {
     
     cursor: pointer;
     font-size: 2rem;
@@ -40,13 +35,12 @@ body {
 background-color: turquoise;
 }
 
-.output{
+.screen{
     grid-column: span 3;
-   
+   font-size: 2rem;
+   text-align: center;
     
 }
 
-.one {
-  
-}
+
 
