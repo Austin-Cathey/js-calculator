@@ -1,19 +1,27 @@
-let outputWindow = document.getElementById('output');
-let numOps = document.querySelectorAll('.number, .operator');
-let equal = document.getElementById('equal');
-let clear = document.getElementById('clear');
-let misMath = false
+const outputWindow = document.getElementById('#output');
+const number = document.querySelectorAll('.number,');
+const operator = document.querySelectorAll('.operator'); 
+const equal = document.getElementById('#equal');
+const clear = document.getElementById('#clear');
+const misMath = false;
+let numbers = [
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
+]
 
-for (let button of numOps) {
-    button.addEventListener('click', (EventTarget) => {
-        if (outputWindow.innerText.length <= 20) {
-            if (button.classList.contains('number') &&  misMath) {
-                outputWindow.innerText = button.innerText;
-            }
-            else {
-                outputWindow.innerText += button.innerText;
-            }
-            misMath = false
-        }
+
+// doesn't work
+
+for (let button of number) {
+    button.addEventListener('click', (e) => {
+        outputWindow.textContent += e.target.textContent
     })
-}
+};
+
+// doesn't work
+
+/* number.forEach(button => {
+    button.addEventListener('click', () => {
+        outputWindow.appendNumber(button.innerText)
+        
+    })
+}) */
