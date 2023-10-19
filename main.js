@@ -9,7 +9,7 @@ let numbers = [
 ]
 
 
-
+//insert numbers
 
 for (let button of number) {
     button.addEventListener('click', (e) => {
@@ -17,9 +17,17 @@ for (let button of number) {
     })
 };
 
+//insert operators
+
 for (let button of operator) {
     button.addEventListener('click', (e) => {
         outputWindow.textContent += e.target.textContent
     })
 };
 
+//single clear
+
+document.getElementById('clear').addEventListener('click', function(){
+    outputWindow.textContent = outputWindow.textContent.slice(0, -1);
+  }
+  )
