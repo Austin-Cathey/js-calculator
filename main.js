@@ -1,7 +1,19 @@
-function display(val){
+let outputWindow = document.getElementById('output');
+let numOps = document.querySelectorAll('.number, .operator');
+let equal = document.getElementById('equal');
+let clear = document.getElementById('clear');
+let misMath = false
 
-    document.getElementById('result').value += val
-
-    return val
-
+for (let button of numOps) {
+    button.addEventListener('click', (EventTarget) => {
+        if (outputWindow.innerText.length <= 20) {
+            if (button.classList.contains('number') &&  misMath) {
+                outputWindow.innerText = button.innerText;
+            }
+            else {
+                outputWindow.innerText += button.innerText;
+            }
+            misMath = false
+        }
+    })
 }

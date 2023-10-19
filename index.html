@@ -1,62 +1,31 @@
 <html lang="en">
-  
 <head>
-    
     <meta charset="UTF-8" />
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <title>Calculator</title>
-    
     <link rel="stylesheet" href="main.css" />
-    
     <script src="main.js" defer></script>
-  
 </head>
-  
 <body>
-    
     <div class="calculator-grid">
-
-        <input type='button' value = 'C' onclick="clearScreen()" class="button" id="clear"/>
-      
-        <input type="text" id="result" class ="screen">
-      
-        <input type="button" value="7" class="button" onClick="display('7')"></input>
-
-        <input type="button" value="8" class="button " onClick="display('8')"></input>
-
-        <input type="button" value="9" class="button" onClick="display('9')"></input>
-
-        <input type="button" value="/" class="operator" onClick="display('/')"></input>
-
-        <input type="button" value="4" class="button" onClick="display('4')"></input>
-
-        <input type="button" value="5" class="button" onClick="display('5')"></input>
-
-        <input type="button" value="6" class="button" onClick="display('6')"></input>
-
-        <input type="button" value="*" class="operator" onClick="display('*')"></input>
-
-        <input type="button" value="1" class="button" onClick="display('1')"></input>
-
-        <input type="button" value="2" class="button" onClick="display('2')"></input>
-
-        <input type="button" value="3" class="button" onClick="display('3')"></input>
-
-        <input type="button" value="-" class="operator" onClick="display('-')"></input>
-
-        <input type="button" value="0" class="button" onClick="display('0')"></input>
-
-        <input type="button" value="." class="button" onClick="display('.')"></input>
-
-        <input type="button" value= "=" class="button equal-sign" onClick="solve()"></input>
-
-       
-        <input type="button" value="+" class="operator" onClick="display('+')"></input>
-   
+        <input type="button" value = 'C' class="clear" id="clear"/>
+        <div type="text" id="output" class ="output"></div>
+        <input type="button" value="7" class="number"></input>
+        <input type="button" value="8" class="number" ></input>
+        <input type="button" value="9" class="number"></input>
+        <input type="button" value="/" class="operator"></input>
+        <input type="button" value="4" class="number"></input>
+        <input type="button" value="5" class="number"></input>
+        <input type="button" value="6" class="number"></input>
+        <input type="button" value="*" class="operator"></input>
+        <input type="button" value="1" class="number"></input>
+        <input type="button" value="2" class="number"></input>
+        <input type="button" value="3" class="number"></input>
+        <input type="button" value="-" class="operator"></input>
+        <input type="button" value="0" class="number"></input>
+        <input type="button" value="." class="number"></input>
+        <input type="button" value= "=" class="operator" id="enter"></input>
+        <input type="button" value="+" class="operator"></input>
     </div>
-  
 </body>
-
 </html>

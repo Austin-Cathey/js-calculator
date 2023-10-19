@@ -20,8 +20,7 @@ body {
 
 }
 
-.button {
-    
+.clear, .operator, .number {
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid white;
@@ -31,16 +30,21 @@ body {
 
 }
 
-.calculator-grid > button:hover {
-background-color: turquoise;
-}
-
-.screen{
+.output {
     grid-column: span 3;
    font-size: 2rem;
    text-align: center;
-    
+   border: 1px solid white;
 }
 
+#enter {
 
+}
 
+#clear {
+
+}
+
+#result {
+
+}
