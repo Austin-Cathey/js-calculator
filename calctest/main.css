@@ -1,0 +1,92 @@
+.container {
+
+    border: 1px solid #cccccc;
+
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+
+    border-radius: 20px;
+
+    position: absolute;
+
+    top: 55%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 450px;
+
+    height: 400px;
+
+}
+
+.keys {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 100px);
+
+    grid-template-rows: minmax(120px, auto) repeat (5, 100px);
+
+    grid-gap: 0;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+.button {
+
+    height: 60px;
+
+    padding: 5px;
+
+    width: 70px;
+
+    font-size: 2rem;
+
+}
+
+.button:hover {
+
+
+
+}
+
+.operator {
+
+
+
+}
+
+.clear {
+
+
+
+   
+}
+
+.clear:hover {
+
+    
+
+}
+
+.equal-sign {
+
+   
+
+}
+
+.equal-sign:hover {
+
+    
+
+}
+
+.screen{
+
+   grid-template-columns: span 3;
+
+}
