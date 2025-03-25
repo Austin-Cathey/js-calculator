@@ -28,7 +28,7 @@ clear.addEventListener('click', function() {
     mathToCompute = '0';
 }) */
 
-
+//old ends
 
 //insert numbers
 
