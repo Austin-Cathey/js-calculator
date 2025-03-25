@@ -1,9 +1,10 @@
-const display = document.getElementById('output');
-/* const number = document.querySelectorAll('.number'); */
+// old
+/* const display = document.getElementById('output');
+// const number = document.querySelectorAll('.number');
 const numbsAndOps = document.querySelectorAll('.number, .operator'); 
 const enter = document.getElementById('enter');
 const clear = document.getElementById('clear');
-/* const math = document.querySelectorAll('.operator, #equal') */
+//const math = document.querySelectorAll('.operator, #equal')
 let mathToCompute = '0';
 
 
@@ -25,7 +26,7 @@ enter.addEventListener('click', function() {
 clear.addEventListener('click', function() {
     display.innerText = '';
     mathToCompute = '0';
-})
+}) */
 
 
 
@@ -66,5 +67,40 @@ clear.addEventListener('click', function() {
   )
   */
   
-
+//new
  
+ const display = document.getElementById('output');
+const numbsAndOps = document.querySelectorAll('.number, .operator'); 
+const enter = document.getElementById('enter');
+const clear = document.getElementById('clear');
+let mathToCompute = '';
+
+for (let digit of numbsAndOps) { 
+    digit.addEventListener('click', function() { 
+        let char = digit.textContent;
+        
+        // Prevent multiple decimals in a single number
+        if (char === '.' && mathToCompute.match(/[\d]+\.[\d]*$/)) {
+            return; 
+        }
+
+        mathToCompute += char;
+        display.textContent = mathToCompute;
+    });
+}
+
+enter.addEventListener('click', function() {
+    try {
+        let result = eval(mathToCompute);
+        display.textContent = result;
+        mathToCompute = result.toString(); // Store the result for continued calculations
+    } catch (error) {
+        display.textContent = 'Error';
+        mathToCompute = '';
+    }
+});
+
+clear.addEventListener('click', function() {
+    display.textContent = '';
+    mathToCompute = '';
+});
